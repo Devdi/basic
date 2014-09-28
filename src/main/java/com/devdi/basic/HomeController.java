@@ -17,7 +17,7 @@ import javax.validation.Valid;
 @RequestMapping("/")
 public class HomeController {
 
-   @RequestMapping("/index")
+   @RequestMapping(value={"", "/", "index"})
    public String index(Model model, String page) {
       model.addAttribute("page", page);
       return "index";
